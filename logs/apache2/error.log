@@ -1,0 +1,81 @@
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 12 11:45:35.598967 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Wed Jun 12 11:45:35.601334 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 12 12:00:44.098097 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 12 12:00:45.594283 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Wed Jun 12 12:00:45.595937 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 12 12:21:18.669135 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.21.0.4. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 12 12:35:11.114994 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Wed Jun 12 12:35:11.115987 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 19 11:11:57.230788 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Wed Jun 19 11:11:57.233117 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 19 11:21:46.042066 2019] [mpm_prefork:notice] [pid 1] AH00171: Graceful restart requested, doing restart
+AH00112: Warning: DocumentRoot [/var/www/tmsnew/] does not exist
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 19 11:21:46.354499 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Wed Jun 19 11:21:46.354767 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Wed Jun 19 11:22:29.933291 2019] [mpm_prefork:notice] [pid 1] AH00171: Graceful restart requested, doing restart
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.3. Set the 'ServerName' directive globally to suppress this message
+[Wed Jun 19 11:22:30.147171 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Wed Jun 19 11:22:30.147529 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu Aug 29 08:19:58.281068 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Thu Aug 29 08:19:58.282080 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.2. Set the 'ServerName' directive globally to suppress this message
+[Thu Aug 29 08:20:11.233122 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.25 (Debian) PHP/7.2.19 configured -- resuming normal operations
+[Thu Aug 29 08:20:11.235262 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Thu Aug 29 08:25:43.022401 2019] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+AH00558: apache2: Could not reliably determine the server's fully qualified domain name, using 172.18.0.4. Set the 'ServerName' directive globally to suppress this message
+[Mon Sep 16 05:34:14.595622 2019] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.22 configured -- resuming normal operations
+[Mon Sep 16 05:34:14.613728 2019] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jan 03 07:36:05.175980 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Fri Jan 03 07:36:05.264089 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jan 03 07:36:21.812662 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Fri Jan 03 07:37:01.908705 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Fri Jan 03 07:37:01.909240 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Fri Jan 03 07:54:45.424231 2020] [mpm_prefork:notice] [pid 1] AH00171: Graceful restart requested, doing restart
+[Fri Jan 03 07:54:45.519665 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Fri Jan 03 07:54:45.519881 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 06 07:30:53.235726 2020] [autoindex:error] [pid 68] [client 192.168.99.1:63234] AH01276: Cannot serve directory /var/www/api/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Mon Jan 06 09:46:13.227014 2020] [mpm_prefork:notice] [pid 1] AH00171: Graceful restart requested, doing restart
+[Mon Jan 06 09:46:13.803328 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 06 09:46:13.803549 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 13 05:43:16.682959 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 13 05:43:16.713890 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 13 05:50:26.818554 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 13 05:50:26.820449 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 13 05:50:43.813550 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 13 05:50:43.816062 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 04:06:05.324081 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 04:06:05.343511 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 04:06:14.806114 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 04:06:14.806808 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 08:50:59.466501 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 08:50:59.490671 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 08:58:13.820323 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jan 20 08:58:44.759032 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 08:58:44.759408 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 08:59:47.605496 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jan 20 09:01:10.927534 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 09:01:10.927945 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 11:37:52.580926 2020] [mpm_prefork:notice] [pid 1] AH00169: caught SIGTERM, shutting down
+[Mon Jan 20 11:40:22.258393 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 11:40:22.259899 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 11:46:02.261662 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jan 20 11:47:26.133647 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 11:47:26.133951 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 14:47:14.702053 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 14:47:14.721032 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 14:52:06.286724 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Mon Jan 20 14:54:32.112716 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 20 14:54:32.113058 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 20 15:02:55.256535 2020] [core:notice] [pid 1] AH00052: child pid 33 exit signal Interrupt (2)
+[Tue Jan 21 05:45:28.547609 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Jan 21 05:45:28.612551 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Jan 21 05:45:35.741873 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Jan 21 05:45:35.746156 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Mon Jan 27 05:26:35.481675 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.26 OpenSSL/1.1.1d configured -- resuming normal operations
+[Mon Jan 27 05:26:35.527445 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
