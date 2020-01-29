@@ -1,8 +1,0 @@
-/.vscode
-/config/*
-/data/*
-/logs/*
-.DS_Store
-.env
-/nbproject/private/
-/www/nbproject/private/
