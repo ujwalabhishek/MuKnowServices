@@ -1,4 +1,4 @@
-# tms-docker is a LAMP stack built with Docker Compose and TMS code 
+# MuKnowServices is a LAMP stack built with Docker Compose and lumen framework
 
 This is a basic LAMP stack environment for TMS built using Docker Compose. It consists following:
 
@@ -12,8 +12,8 @@ This is a basic LAMP stack environment for TMS built using Docker Compose. It co
 Clone this repository on your local computer and switch to branch `7.2.x`. Run the `docker-compose up -d`.
 
 ```shell
-git clone https://github.com/BIIPBYTETECH/tms-docker.git
-cd tms-docker
+git clone git@github.com:BIIPBYTETECH/MuKnowServices.git
+cd MuKnowServices
 git fetch --all
 git checkout origin/master
 docker-compose up -d
