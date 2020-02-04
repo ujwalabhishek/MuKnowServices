@@ -19,7 +19,7 @@ class HomeController extends Controller {
     public function __construct() {
         //
     }
-
+    
     public function index() {
         $lessons = Lesson::take(10)->offset(3)
                 ->orderBy('id', 'desc')
