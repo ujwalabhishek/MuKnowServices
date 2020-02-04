@@ -51,4 +51,14 @@ RUN pecl install mcrypt-1.0.1
 RUN a2enmod rewrite headers ssl
 
 #enable sendmail
-#RUN apt-get -y install sendmail
+#RUN apt-get install sendmail -y
+
+#enable mhsendmail
+
+RUN cd ~
+RUN apt-get install -y golang-go
+RUN mkdir $HOME/gocode
+RUN echo "export GOPATH=$HOME/gocode" >> ~/.profile
+RUN /bin/bash -c "source ~/.profile"
+RUN go get github.com/mailhog/mhsendmail
+RUN cp $HOME/go/bin/mhsendmail /usr/local/bin/mhsendmail
