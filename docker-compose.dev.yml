@@ -1,0 +1,41 @@
+version: "3"
+
+services:
+  webserver:
+    hostname: 'devservices.muknow.com'
+    ports:
+      - 8080:80
+      - 443:443
+  mysql:
+    ports:
+      - 3307:3306
+    environment:
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD_DEV}
+        MYSQL_DATABASE: ${MYSQL_DATABASE_DEV}
+        MYSQL_USER: ${MYSQL_USER_DEV}
+        MYSQL_PASSWORD: ${MYSQL_PASSWORD_DEV}
+        
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    container_name: 'phpmyadmin-service'
+    restart: always
+    links:
+      - mysql
+    environment:
+        PMA_HOST: mysql
+        PMA_PORT: 3306
+        MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD_DEV}
+        MYSQL_USER: ${MYSQL_USER_DEV}
+        MYSQL_PASSWORD: ${MYSQL_PASSWORD_DEV}
+    ports:
+      - 8081:80
+    volumes: 
+      - /sessions
+  mailhog:
+    image: mailhog/mailhog:latest
+    container_name: 'mailhog'
+    hostname: 'mailhog'
+    restart: always
+    ports:
+      - 1025:1025
+      - 8025:8025
