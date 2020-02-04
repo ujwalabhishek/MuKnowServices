@@ -58,5 +58,3 @@ $router->group(['middleware' => 'auth:api'], function () use ($router) {
 $router->get('lesson','HomeController@showAllLessons');
 
 $router->get('lesson/{id}','HomeController@showLessonData');
-
-$router->get('test','HomeController@index');

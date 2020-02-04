@@ -276,3 +276,142 @@ AH00558: apache2: Could not reliably determine the server's fully qualified doma
 [Tue Feb 04 11:27:08.017267 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
 [Tue Feb 04 11:27:30.341210 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
 [Tue Feb 04 11:27:30.342465 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 14:41:51.074412 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 14:41:51.080073 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 14:45:50.869658 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 14:45:55.596718 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 14:45:55.597460 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 14:54:15.636509 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 14:54:19.053874 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 14:54:19.054591 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 14:57:47.632628 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 14:58:37.965420 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 14:58:37.974434 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 15:00:08.547317 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 15:00:12.236934 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 15:00:12.239937 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 15:00:56.669715 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 15:01:24.646089 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 15:01:24.647102 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 15:01:35.111154 2020] [autoindex:error] [pid 17] [client 172.20.0.1:60968] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:02:03.421517 2020] [autoindex:error] [pid 20] [client 172.20.0.1:32770] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:02:41.588085 2020] [autoindex:error] [pid 21] [client 172.20.0.1:32810] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:04:32.446512 2020] [autoindex:error] [pid 23] [client 172.20.0.1:32856] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:06:43.099380 2020] [autoindex:error] [pid 17] [client 172.20.0.1:32910] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:15:06.514261 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 15:15:12.770599 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 15:15:12.772154 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 15:15:13.058892 2020] [autoindex:error] [pid 18] [client 172.20.0.1:33080] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:15:13.059686 2020] [autoindex:error] [pid 17] [client 172.20.0.1:33076] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:15:13.067127 2020] [autoindex:error] [pid 21] [client 172.20.0.1:33078] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:15:13.088478 2020] [autoindex:error] [pid 20] [client 172.20.0.1:33074] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:15:13.819635 2020] [autoindex:error] [pid 20] [client 172.20.0.1:33074] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:27:32.108268 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 15:27:47.608675 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 15:27:47.619297 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 15:27:48.318827 2020] [autoindex:error] [pid 16] [client 172.21.0.1:50440] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:27:48.332421 2020] [autoindex:error] [pid 18] [client 172.21.0.1:50452] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:28:32.461098 2020] [autoindex:error] [pid 22] [client 172.21.0.1:50522] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 15:32:30.087622 2020] [autoindex:error] [pid 25] [client 172.21.0.1:50604] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:13:18.136851 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 16:13:57.081552 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 16:13:57.084161 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 16:13:59.770635 2020] [autoindex:error] [pid 18] [client 172.22.0.1:37166] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:13:59.785922 2020] [autoindex:error] [pid 19] [client 172.22.0.1:37194] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:15:36.732590 2020] [autoindex:error] [pid 23] [client 172.22.0.1:37252] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:16:17.334406 2020] [autoindex:error] [pid 24] [client 172.22.0.1:37330] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:24:55.352359 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 16:30:48.561027 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 16:30:48.566070 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 16:30:49.147726 2020] [autoindex:error] [pid 19] [client 172.23.0.1:53122] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:30:49.152428 2020] [autoindex:error] [pid 16] [client 172.23.0.1:53106] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:38:35.898733 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 16:39:59.738949 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 16:39:59.740758 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 16:40:01.535582 2020] [autoindex:error] [pid 21] [client 172.24.0.1:54508] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:40:01.537295 2020] [autoindex:error] [pid 18] [client 172.24.0.1:54516] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:51:52.462195 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 16:55:38.326017 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 16:55:38.333493 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 16:55:39.578016 2020] [autoindex:error] [pid 17] [client 172.25.0.1:42644] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 16:55:41.412634 2020] [autoindex:error] [pid 17] [client 172.25.0.1:42644] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 17:03:52.223870 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 18:22:18.064817 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 18:22:18.067972 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 18:22:18.252785 2020] [autoindex:error] [pid 18] [client 172.26.0.1:42406] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 18:22:18.252872 2020] [autoindex:error] [pid 17] [client 172.26.0.1:42408] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 18:49:58.284980 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 18:53:59.013055 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 18:53:59.018595 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 18:54:00.141883 2020] [autoindex:error] [pid 17] [client 172.27.0.1:44658] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 18:54:00.141862 2020] [autoindex:error] [pid 16] [client 172.27.0.1:44660] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 18:58:17.835467 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 19:01:11.232845 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 19:01:11.234627 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 19:01:11.247637 2020] [autoindex:error] [pid 17] [client 172.28.0.1:39106] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:01:12.090250 2020] [autoindex:error] [pid 17] [client 172.28.0.1:39106] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:06:49.560682 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 19:09:35.711373 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 19:09:35.729042 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 19:09:36.166040 2020] [autoindex:error] [pid 16] [client 172.29.0.1:45858] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:09:37.494681 2020] [autoindex:error] [pid 16] [client 172.29.0.1:45858] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:22:11.192112 2020] [autoindex:error] [pid 22] [client 172.29.0.1:46008] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:22:11.409863 2020] [autoindex:error] [pid 22] [client 172.29.0.1:46008] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:24:49.737460 2020] [autoindex:error] [pid 23] [client 172.29.0.1:46020] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:26:00.992859 2020] [autoindex:error] [pid 19] [client 172.29.0.1:46028] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:26:01.193850 2020] [autoindex:error] [pid 19] [client 172.29.0.1:46028] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:27:01.356191 2020] [autoindex:error] [pid 17] [client 172.29.0.1:46038] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:39:22.775499 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 19:56:00.128953 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 19:56:00.131985 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 19:56:00.751871 2020] [autoindex:error] [pid 17] [client 172.30.0.1:47062] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 19:56:01.292619 2020] [autoindex:error] [pid 17] [client 172.30.0.1:47062] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 20:09:55.482562 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 20:13:00.758366 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 20:13:00.762794 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 20:22:00.657571 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 20:22:38.325848 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 20:22:38.328850 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 20:23:26.502390 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 20:26:22.403829 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 20:26:22.406486 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 20:50:26.040632 2020] [autoindex:error] [pid 18] [client 192.168.16.1:53144] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 20:50:26.859988 2020] [autoindex:error] [pid 18] [client 192.168.16.1:53144] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 20:50:52.015104 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 20:50:56.850092 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 20:50:56.853405 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 20:55:49.380154 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 21:02:42.076677 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 21:02:42.078980 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 21:02:45.609747 2020] [autoindex:error] [pid 16] [client 192.168.32.1:60194] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 21:02:46.568917 2020] [autoindex:error] [pid 16] [client 192.168.32.1:60194] AH01276: Cannot serve directory /var/www/html/: No matching DirectoryIndex (index.php,index.html) found, and server-generated directory index forbidden by Options directive
+[Tue Feb 04 21:05:01.877523 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 21:05:05.205932 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 21:05:05.207645 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 21:08:36.662563 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 21:11:31.756476 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 21:11:31.779012 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 21:43:15.781407 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 21:43:21.487760 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 21:43:21.503336 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 21:45:52.823365 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 21:45:56.480351 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 21:45:56.481058 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 21:50:50.290806 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 21:50:53.670205 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 21:50:53.671123 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 21:54:13.453680 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 21:57:34.962798 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 21:57:34.973895 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 22:15:06.523843 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 22:15:10.012406 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 22:15:10.013439 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 22:18:10.012891 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 22:19:27.607336 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 22:19:27.613604 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 22:26:55.266913 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 22:28:06.781724 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 22:28:06.785703 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'
+[Tue Feb 04 22:35:17.701046 2020] [mpm_prefork:notice] [pid 1] AH00170: caught SIGWINCH, shutting down gracefully
+[Tue Feb 04 22:36:37.680331 2020] [mpm_prefork:notice] [pid 1] AH00163: Apache/2.4.38 (Debian) PHP/7.2.27 OpenSSL/1.1.1d configured -- resuming normal operations
+[Tue Feb 04 22:36:37.687788 2020] [core:notice] [pid 1] AH00094: Command line: 'apache2 -D FOREGROUND'

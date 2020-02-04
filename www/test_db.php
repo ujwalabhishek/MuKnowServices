@@ -1,5 +1,5 @@
 <?php
-$link = mysqli_connect("mysql", "root", "tms#8938480*", null);
+$link = mysqli_connect("mysql", "root", "mu78adjF2know*89dev!@2020", null);
 
 if (!$link) {
     echo "Error: Unable to connect to MySQL." . PHP_EOL;

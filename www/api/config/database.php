@@ -12,7 +12,7 @@ return [
             'charset'   => 'utf8',
             'collation' => 'utf8_unicode_ci',
         ],
-        'lessonssg' => [
+        'lessonsg' => [
             'driver' => 'mysql',
             'host' => env('DB_HOST_LESSONSSG'),
             'database' => env('DB_DATABASE_LESSONSSG'),

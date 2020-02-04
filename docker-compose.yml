@@ -19,7 +19,8 @@ services:
     container_name: 'mysql-service'
     restart: 'always'
 
-    volumes: 
+    volumes:
       - ${MYSQL_LOG_DIR-./logs/mysql}:/var/log/mysql
-      
-      
+      - ./data/init:/docker-entrypoint-initdb.d/:rw
+      - ./config/mysql/mysqld.cnf:/etc/mysql/mysql.conf.d/mysqld.cnf
+

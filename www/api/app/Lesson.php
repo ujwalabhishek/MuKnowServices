@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 class Lesson extends Model
 {
-    protected $connection = 'lessonssg';
+    protected $connection = 'lessonsg';
     public $table = "lesson";
    
 
