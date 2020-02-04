@@ -14,7 +14,7 @@
 $router->get('/', function () use ($router) {
     return $router->app->version();
 });
-
+/** 
 // API route group
 $router->group(['prefix' => 'api'], function () use ($router) {
     // Matches "/api/register
@@ -35,14 +35,14 @@ $router->group(['prefix' => 'api'], function () use ($router) {
 });
 
 $router->post('/auth/login', 'AuthController@login');
-
+ */
 /**
  * User credentials protected routes
- */
+
 $router->group(['middleware' => 'auth:api'], function () use ($router) {
     $router->get('/auth/me', 'AuthController@me');
 });
-
+ */
 //$router->group(['prefix' => 'api'], function () use ($router) {
   //$router->get('lesson',  ['uses' => 'HomeController@showAllLessons']);
 
@@ -55,6 +55,8 @@ $router->group(['middleware' => 'auth:api'], function () use ($router) {
   //$router->put('authors/{id}', ['uses' => 'AuthorController@update']);
 //});
 
-$router->get('lesson','HomeController@showAllLessons');
+//$router->get('lesson','HomeController@showAllLessons');
 
-$router->get('lesson/{id}','HomeController@showLessonData');
+//$router->get('lesson/{id}','HomeController@showLessonData');
+
+$router->get('test','HomeController@index');

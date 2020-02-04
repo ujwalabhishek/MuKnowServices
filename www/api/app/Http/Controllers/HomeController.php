@@ -20,6 +20,12 @@ class HomeController extends Controller {
         //
     }
 
+    public function index() {
+        $lessons = Lesson::take(10)->offset(3)
+                ->orderBy('id', 'desc')
+                ->get();
+        exit('hello');
+    }
     public function showAllLessons() {
 
         $lessons = Lesson::take(10)->offset(3)
