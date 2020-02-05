@@ -5,13 +5,12 @@ dev:
             		-f docker-compose.yml \
 					-f docker-compose.dev.yml \
         	up -d --remove-orphans
-	@composer install --working-dir=www/api
+	
 dev-rebuild:
 	@docker-compose \
             -f docker-compose.yml \
 			-f docker-compose.dev.yml \
         up -d --remove-orphans
-	@composer install --working-dir=www/api
 
 staging:
 	@docker-compose down --remove-orphans && \

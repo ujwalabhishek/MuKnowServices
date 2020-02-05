@@ -62,3 +62,5 @@ RUN echo "export GOPATH=$HOME/gocode" >> ~/.profile
 RUN /bin/bash -c "source ~/.profile"
 RUN go get github.com/mailhog/mhsendmail
 RUN cp $HOME/go/bin/mhsendmail /usr/local/bin/mhsendmail
+
+RUN composer install --working-dir=/var/www/api
