@@ -1,0 +1,254 @@
+.error{
+
+    color:red;
+
+}
+
+/**THE SAME CSS IS USED IN ALL 3 DEMOS**/    
+
+/**gallery margins**/  
+
+ul.gallery{    
+
+    margin-left: 3vw;     
+
+    margin-right:3vw;  
+
+}    
+
+
+
+.zoom {      
+
+    -webkit-transition: all 0.35s ease-in-out;    
+
+    -moz-transition: all 0.35s ease-in-out;    
+
+    transition: all 0.35s ease-in-out;     
+
+    cursor: -webkit-zoom-in;      
+
+    cursor: -moz-zoom-in;      
+
+    cursor: zoom-in;  
+
+}     
+
+
+
+.zoom:hover,  
+
+.zoom:active,   
+
+.zoom:focus {
+
+    /**adjust scale to desired size, 
+
+    add browser prefixes**/
+
+    -ms-transform: scale(2.5);    
+
+    -moz-transform: scale(2.5);  
+
+    -webkit-transform: scale(2.5);  
+
+    -o-transform: scale(2.5);  
+
+    transform: scale(2.5);    
+
+    position:relative;      
+
+    z-index:100;  
+
+}
+
+
+
+/**To keep upscaled images visible on mobile, 
+
+increase left & right margins a bit**/  
+
+@media only screen and (max-width: 768px) {   
+
+    ul.gallery {      
+
+        margin-left: 15vw;       
+
+        margin-right: 15vw;
+
+    }
+
+
+
+    /**TIP: Easy escape for touch screens,
+
+    give gallery's parent container a cursor: pointer.**/
+
+    .DivName {cursor: pointer}
+
+}
+
+.navbar-default {
+
+    background-color: #e2f3f1 ;
+
+    border-color: #6fd7ca;
+
+}
+
+
+
+a {
+
+    color: #6563a4;
+
+}
+
+.navbar-default .navbar-brand {
+
+    color: #6563a4;
+
+}
+
+.dropdown-menu>li>a {
+
+    color: #6563a4;
+
+
+
+}
+
+.sidebar ul li a.active {
+
+    background-color: #6fd7ca;
+
+}
+
+.nav-pills > li.active > a,
+
+.nav-pills > li.active > a:hover,
+
+.nav-pills > li.active > a:focus {
+
+    color: #fff;
+
+    background-color: #6fd7ca;
+
+}
+
+.nav .open > a,
+
+.nav .open > a:hover,
+
+.nav .open > a:focus {
+
+    background-color: #e2f3f1;
+
+    border-color: #6fd7ca;
+
+}
+
+.dropdown-menu > .active > a,
+
+.dropdown-menu > .active > a:hover,
+
+.dropdown-menu > .active > a:focus {
+
+    color: #fff;
+
+    text-decoration: none;
+
+    background-color: #6fd7ca;
+
+    outline: 0;
+
+}
+
+a:hover,
+
+a:focus {
+
+    color: #6fd7ca;
+
+    text-decoration: underline;
+
+}
+
+ul.nav li a:hover, ul.nav li a:active {
+
+    color: #6563a4 !important;
+
+}
+
+ul.dropdown-user li a:hover{
+
+    background-color: #6fd7ca !important;
+
+}
+
+.nav>li>a:focus, .nav>li>a:hover {
+
+    text-decoration: none;
+
+    background-color: #6fd7ca;
+
+}
+
+.panel-default>.panel-heading {
+
+    color: #333;
+
+    background-color: #e2f3f1 !important;
+
+    border-color: #6fd7ca;
+
+}
+
+
+
+.row>.panel-heading {
+
+    color: #333;
+
+    background-color: #e2f3f1 !important;
+
+    border-color: #6fd7ca;
+
+}
+
+.smile-primary {
+
+    color: #fff;
+
+    background-color: #6563a4;
+
+    border-color: #2d2b75;
+
+}
+
+.thumbimage {
+
+    float:left;
+
+    width:100px;
+
+    height: 80px;
+
+    position:relative;
+
+    padding:5px;
+
+}
+.articlecaption{
+border:1px solid black !important;
+background-color:#d2d2d2 !important;
+border-radius:8px !important;
+padding:2px !important;
+margin-top:2px !important;
+}
+/*video[poster]{
+    height:100%;
+    width:100% !important;
+    
+}
+*/

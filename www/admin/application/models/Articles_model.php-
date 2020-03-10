@@ -1,0 +1,535 @@
+<?php
+
+class Articles_model extends MY_Model {
+
+    public function __construct() {
+        parent::__construct();
+        $this->load->database();
+        $this->table = 'articles';
+        $this->result_mode = 'object';
+        $this->primary_key = 'id';
+    }
+
+    function get_random_articles($user_type) {
+        //$sql = "SELECT a.* FROM articles as a, category as c where a.active = '1' AND a.deleted = '0' AND c.id = a.cat_id AND c.deleted = '0' AND c.parent_id != '0' AND a.article_type != 'mini_certification' ORDER BY id DESC LIMIT 10;"; 
+        if($user_type=='non_subscriber'){
+		$sql = "SELECT a.* FROM articles as a, category as c where a.active = '1' AND a.deleted = '0' AND c.id = a.cat_id AND c.deleted = '0' AND c.parent_id != '0' AND a.article_type = '$user_type' ORDER BY id DESC LIMIT 10;";
+        }
+        elseif($user_type=='subscriber')
+        {
+         $sql = "SELECT a.* FROM articles as a, category as c where a.active = '1' AND a.deleted = '0' AND c.id = a.cat_id AND c.deleted = '0' AND c.parent_id != '0' AND a.article_type != 'mini_certification' AND a.article_type = '$user_type' ORDER BY id DESC LIMIT 10;";
+
+        }
+        $query = $this->db->query($sql);
+        //$query = $this->db->query($sql);
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        } else {
+            return null;
+        }
+    }
+
+    function get_fav_random_articles($user_type='') {
+        //$sql1 = "SELECT distinct article_id FROM favourite_article ORDER BY created_on DESC LIMIT 5;";
+        if($user_type=='non_subscriber'){
+        $sql = "SELECT a.* FROM articles as a, category as c, favourite_article as fa 
+                where a.active = '1' AND a.deleted = '0' AND c.id = a.cat_id AND c.deleted = '0' AND a.id=fa.article_id AND a.article_type = '$user_type'
+                GROUP BY fa.article_id order by count(fa.article_id) desc limit 10;";
+        }
+        elseif($user_type=='subscriber')
+        {
+            $sql = "SELECT a.* FROM articles as a, category as c, favourite_article as fa 
+                where a.active = '1' AND a.deleted = '0' AND c.id = a.cat_id AND c.deleted = '0' AND a.id=fa.article_id AND a.article_type != 'mini_certification'
+                GROUP BY fa.article_id order by count(fa.article_id) desc limit 10;";
+        }
+       
+        $query = $this->db->query($sql);
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        } else {
+            return null;
+        }
+    }
+
+    function get_viewed_random_articles() {
+        //$sql1 = "SELECT distinct article_id FROM favourite_article ORDER BY created_on DESC LIMIT 5;";
+        $sql = "SELECT a.* FROM articles as a, category as c, articles_view_count as fa 
+                where a.active = '1' AND a.deleted = '0' AND c.id = a.cat_id AND c.deleted = '0' AND a.id=fa.article_id AND a.article_type = 'mini_certification'
+                GROUP BY fa.article_id order by count(fa.article_id) desc limit 10;";
+        $query = $this->db->query($sql);
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        } else {
+            return null;
+        }
+    }
+    
+    function get_continue_watching($user_id)
+    {    
+        //$this->db->select('video_time.*');
+      $this->db->select('articles.id,articles.language_key,articles.title,articles.cat_id,articles.video_type,articles.url_link,articles.url_thumb,articles.url_duration,articles.description,articles.short_description,articles.active,articles.deleted,articles.created_on,articles.author_id,articles.article_type,articles.trailer_video,articles.trailer_thumb,articles.trailer_duration,video_time.user_id,video_time.assesment_id,video_time.start_time,video_time.end_time');
+        $this->db->join('articles','articles.id=video_time.article_id','left');
+        $this->db->join('assessment','assessment.id=video_time.assesment_id','left');
+        $this->db->where('articles.article_type','mini_certification');
+        $this->db->where('articles.active','1');
+        $this->db->where('articles.deleted','0');
+        $this->db->where('assessment.deleted','0');
+        $this->db->where('assessment.status','Active');
+       // $this->db->where('articles.url_duration =','video_time.end_time');
+        $this->db->where('video_time.user_id',$user_id);
+        return $this->db->get('video_time')->result();
+    }
+	
+	function get_recomend_articles($cat_id,$articletype, $id) {
+        //$sql1 = "SELECT distinct article_id FROM favourite_article ORDER BY created_on DESC LIMIT 5;";
+		if($articletype == 'non_subscriber'){
+        $sql = "SELECT distinct a.* FROM articles as a, category as c where a.active = '1' AND a.deleted = '0' AND  a.cat_id = '$cat_id' AND c.deleted = '0' AND c.parent_id != '0' AND a.article_type = '$articletype' AND a.id != $id ORDER BY rand() DESC LIMIT 5;";
+		}
+		else{
+			$sql = "SELECT distinct a.* FROM articles as a, category as c where a.active = '1' AND a.deleted = '0' AND  a.cat_id = '$cat_id' AND c.deleted = '0' AND c.parent_id != '0' AND a.article_type != 'mini_certification' AND a.id != $id ORDER BY rand() DESC LIMIT 5;";
+				}
+        $query = $this->db->query($sql);
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        } else {
+            return null;
+        }
+    }
+
+    function get_article_name($keyword, $user_type) {  
+        if($user_type == 'subscriber'){
+        $sql = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type != 'mini_certification' AND title LIKE '%$keyword%'";
+        }
+        else {
+        $sql = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type = '$user_type' AND title LIKE '%$keyword%'";    
+        }
+        $query = $this->db->query($sql);
+        //$user_id = "SELECT id FROM users WHERE username LIKE '%$keyword%'";
+        // $sql2 = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' and id IN (SELECT Distinct GROUP_CONCAT(article_id) FROM article_tag WHERE tag_name LIKE '%$keyword%')";
+        //$query2 = $this->db->query($sql2);
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        } else {  
+            $this->db->select('articles.*,users.username');
+            $this->db->where('articles.deleted','0');
+            $this->db->where('articles.active','1');
+            if($user_type == 'subscriber'){
+            $this->db->where('articles.article_type !=','mini_certification');
+            }
+            else {
+              $this->db->where('articles.article_type',$user_type);   
+            }
+            $this->db->like('users.username',$keyword);
+            $this->db->join('users','users.id=articles.author_id','left');
+            return $this->db->get('articles')->result();
+            
+//            $sql1="SELECT *
+//   FROM articles, users 
+//WHERE articles.active = '1' AND articles.deleted = '0' AND articles.article_type = '$user_type' AND users.username LIKE '%$keyword%' 
+//   AND  users.id = articles.author_id";
+//           
+//       //$sql1 = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type = '$user_type' and user_id IN (SELECT id FROM users WHERE username LIKE '%$keyword%')";
+//            $query1 = $this->db->query($sql1);
+//             //echo '<pre>'; print_r($query1->result()); exit;
+//            if ($query1->num_rows() > 0) {
+//                $row = $query1->result();
+//                return $row;
+//            }
+        }
+        return null;
+    }
+
+    function get_article_name1($keyword, $tag_id, $user_type) {
+        if($user_type == 'subscriber'){
+        $sql = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type != 'mini_certification' AND title LIKE '%$keyword%' OR id IN ($tag_id)";
+        }
+        else {
+    $sql = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type = '$user_type' AND title LIKE '%$keyword%' OR id IN ($tag_id)";
+      
+        }
+        $query = $this->db->query($sql);
+        //$user_id = "SELECT id FROM users WHERE username LIKE '%$keyword%'";
+        // $sql2 = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' and id IN (SELECT Distinct GROUP_CONCAT(article_id) FROM article_tag WHERE tag_name LIKE '%$keyword%')";
+        //$query2 = $this->db->query($sql2);
+        //echo $this->db->last_query();
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        } else { 
+             $this->db->select('articles.*,users.username');
+            $this->db->where('articles.deleted','0');
+            $this->db->where('articles.active','1');
+            $this->db->where('articles.article_type',$user_type);
+            $this->db->like('users.username',$keyword);
+            $this->db->join('users','users.id=articles.author_id','left');
+            return $this->db->get('articles')->result();
+//            $sql1 = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type = '$user_type' AND user_id  IN (SELECT username FROM users WHERE username LIKE '%$keyword%')";
+//
+//            $query1 = $this->db->query($sql1);
+//            if ($query1->num_rows() > 0) {
+//                $row = $query1->result();
+//                return $row;
+//            }
+        }
+        return null;
+    }
+
+   function get_articletag_name($keyword, $user_type) { 
+       if($user_type =='subscriber'){
+        $sql = "SELECT Distinct GROUP_CONCAT(article_id) as article_id FROM article_tag,articles as a WHERE tag_name LIKE '%$keyword%' AND article_id = a.id AND a.active = '1' AND a.deleted = '0' AND a.article_type != 'mini_certification'";
+       }
+       else {
+                $sql = "SELECT Distinct GROUP_CONCAT(article_id) as article_id FROM article_tag,articles as a WHERE tag_name LIKE '%$keyword%' AND article_id = a.id AND a.active = '1' AND a.deleted = '0' AND a.article_type = '$user_type'";   
+       }
+
+        $query = $this->db->query($sql);
+        $sql1 = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type = '$user_type' and user_id IN (SELECT id FROM users WHERE username LIKE '%$keyword%')";
+        $query = $this->db->query($sql);
+        $query1 = $this->db->query($sql1);
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+            return $row;
+        }
+
+        return null;
+    }
+    
+     function get_articletag_name_new($keyword, $user_type) {
+        $sql = "SELECT Distinct GROUP_CONCAT(article_id) as article_id FROM article_tag,articles as a WHERE tag_name LIKE '%$keyword%' AND article_id = a.id AND a.active = '1' AND a.deleted = '0' AND a.article_type = '$user_type'";
+
+        $query = $this->db->query($sql);
+        $sql1 = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND article_type = '$user_type' and user_id IN (SELECT id FROM users WHERE username LIKE '%$keyword%')";
+        $query = $this->db->query($sql);
+        $query1 = $this->db->query($sql1);
+        echo '<pre>'; print_r($query1); exit;
+        if ($query->num_rows() > 0) {
+            $row = $query->row();
+            return $row;
+        } 
+        elseif($query1->num_rows() > 0){
+            $row = $query->row();
+            return $row;
+        } 
+
+        return null;
+    }
+	
+	function get_article_lan($language, $user_type) {
+        $sql = "SELECT * FROM articles WHERE active = '1' AND deleted = '0' AND language_key = '$language' AND article_type = '$user_type'";
+        $query = $this->db->query($sql);
+       if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        }
+    }
+	
+	
+	function get_my_article($user_id) {
+        $sql = "SELECT * FROM articles WHERE active = '1' and deleted = '0' and author_id = '$user_id' order by id desc";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        }
+        return null;
+    }	
+	
+	function get_dept_article($aa, $subcat_id) {
+		$sql = "SELECT * FROM articles WHERE id IN ($aa) AND active = '1' and deleted = '0' AND cat_id = $subcat_id";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        }
+        return null;
+    }
+	
+	function get_dept_article_lan($aa, $subcat_id, $language) {
+		$sql = "SELECT * FROM articles WHERE id IN ($aa) AND active = '1' and deleted = '0' AND cat_id = $subcat_id AND language_key = '$language'";
+        $query = $this->db->query($sql);
+        if ($query->num_rows() > 0) {
+            $row = $query->result();
+            return $row;
+        }
+        return null;
+    }
+	
+	function get_approved_article() {
+        $sql = "SELECT `a`.*, `u`.`username`, `c`.`name` as `category_name` FROM `articles` `a` JOIN `users` `u` ON `u`.`id` = `a`.`user_id` JOIN `category` `c` ON `c`.`id` = `a`.`cat_id` WHERE `a`.`active` = '1' AND `a`.`deleted` = '0' ORDER BY `a`.`created_on` DESC";
+        $query = $this->db->query($sql);
+       if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        }
+    }
+	
+	function get_pending_article() {
+        $sql = "SELECT `a`.*, `u`.`username`, `c`.`name` as `category_name` FROM `articles` `a` JOIN `users` `u` ON `u`.`id` = `a`.`user_id` JOIN `category` `c` ON `c`.`id` = `a`.`cat_id` WHERE `a`.`active` = '0' AND `a`.`deleted` = '0' ORDER BY `a`.`created_on` DESC";
+        $query = $this->db->query($sql);
+       if ($query->num_rows() > 0) {
+            return $query->num_rows();
+        }
+    }
+    
+    function get_user_list()
+    {
+         return $this->db->get('users')->result();
+    }
+     function get_image_list($id)
+    {
+         $this->db->where('user_id',$id); 
+         $this->db->where('cat_id','0'); 
+         $this->db->where('article_id','0'); 
+         $this->db->where('group_id','0'); 
+         
+         return $this->db->get('image_files')->row();
+    } 
+    
+    function get_article_by_category($cat,$language='',$user_type)
+    { 
+         $this->db->where_in('cat_id',$cat); 
+         $this->db->where('active','1');
+         $this->db->where('deleted','0');
+         if(!empty($language)){
+         $this->db->where('language_key',$language);}
+         $this->db->where('article_type !=','mini_certification');
+         //$this->db->where('article_type ',$user_type);
+          return $this->db->get('articles')->result();
+    }
+  function get_article_by_author_row($id) {
+       // $this->db->where('group_company.company_id',$id);
+            $this->db->where('deleted','0');
+            $this->db->where('active','1');
+            $this->db->where('article_type','mini_certification');
+            $this->db->where('author_id',$id);
+            return $this->db->get('articles')->row();
+        
+    }
+    function get_article_by_author_result($id) {
+       // $this->db->where('group_company.company_id',$id);
+            $this->db->where('deleted','0');
+            $this->db->where('active','1');
+            $this->db->where('article_type','mini_certification');
+            $this->db->where('author_id',$id);
+            return $this->db->get('articles')->result();
+        
+    }
+    function get_article_by_author_row_courses($id) {
+       // $this->db->where('group_company.company_id',$id);
+            $this->db->where('deleted','0');
+            $this->db->where('active','1');
+            $this->db->where('article_type','courses');
+            $this->db->where('author_id',$id);
+            return $this->db->get('articles')->row();
+        
+    }
+    function get_article_count($id)
+    {
+        $this->db->select('count(id) as article_count');
+        $this->db->where('author_id',$id);
+        $this->db->where('deleted','0');
+        $this->db->where('active','1');    
+        $this->db->where('article_type !=','mini_certification');
+        return $this->db->get('articles')->row();
+    }
+    
+    function get_fav_article_count($id)
+    {
+        $this->db->select('count(id) as favarticle_count');
+        $this->db->where('author_id',$id);
+        return $this->db->get('favorite_author')->row();
+    }
+    
+    function get_article_tag($articleid)
+    {
+        $this->db->where('article_id',$articleid);
+        return $this->db->get('article_tag')->result();
+    }
+    
+    function check_mini_cert($id)
+    {   
+        $this->db->select('articles.*');
+        $this->db->join('article_quiz','article_quiz.article_id=articles.id','left');
+        //$this->db->join('assessment_detail','assessment_detail.article_quiz_id=article_quiz.id','left');
+        //$this->db->join('assessment','assessment.id=assessment_detail.assesment_id','left');
+        $this->db->where('article_quiz.article_id',$id);
+         //$this->db->where('article_quiz.id','assessment_detail.assessment_detail');
+        //$this->db->where('assessment.deleted','0');
+        return $this->db->get('articles')->row();
+        
+    }
+    
+    function check_mini_cert1($id)
+    {
+        $this->db->join('assessment_detail','assessment_detail.article_quiz_id=article_quiz.id','left');
+        $this->db->join('assessment','assessment.id=assessment_detail.assesment_id','left');
+        $this->db->where('article_quiz.article_id',$id);
+        $this->db->where('assessment.deleted','0');
+        return $this->db->get('article_quiz')->result();
+    }
+   
+    function get_change1()
+    {    $data['url_link'] = 'https://player.vimeo.com/external/228468825.sd.mp4?s=dbb037963279f5d79c1923888f9f6dc4e1abc51e&profile_id=164';
+         $data['url_thumb'] = 'https://i.vimeocdn.com/video/648527985_295x166.jpg?r=pad';
+         $data['trailer_video'] = 'https://player.vimeo.com/external/228468825.sd.mp4?s=dbb037963279f5d79c1923888f9f6dc4e1abc51e&profile_id=164';
+         $data['trailer_thumb'] = 'https://i.vimeocdn.com/video/648527985_295x166.jpg?r=pad';
+        $this->db->where_in('id',array('21','22','23','24','25','26','27','28','29','30','31','32','33','34','35','36','37','38','39','40'));
+        $this->db->update('articles',$data);
+    }
+    
+      function get_change2()
+    {    $data['url_link'] = 'https://player.vimeo.com/external/228462954.sd.mp4?s=874ef94837e47553b926e4fcc7b949e66d81d0c3&profile_id=165';
+         $data['url_thumb'] = 'https://i.vimeocdn.com/video/648520970_295x166.jpg?r=pad';
+         $data['trailer_video'] = 'https://player.vimeo.com/external/228462954.sd.mp4?s=874ef94837e47553b926e4fcc7b949e66d81d0c3&profile_id=165';
+         $data['trailer_thumb'] = 'https://i.vimeocdn.com/video/648520970_295x166.jpg?r=pad';
+        $this->db->where_in('id',array('41','42','43','44','45','46','47','48','49','50','51','52','53','54','55','56','57','58','59','60'));
+        $this->db->update('articles',$data);
+    }
+      function get_change3()
+    {    $data['url_link'] = 'https://player.vimeo.com/external/228463288.sd.mp4?s=f76b2706f220e67c1f09b42b331d1c9d5845d067&profile_id=165';
+         $data['url_thumb'] = 'https://i.vimeocdn.com/video/648521146_295x166.jpg?r=pad';
+         $data['trailer_video'] = 'https://player.vimeo.com/external/228463288.sd.mp4?s=f76b2706f220e67c1f09b42b331d1c9d5845d067&profile_id=165';
+         $data['trailer_thumb'] = 'https://i.vimeocdn.com/video/648521146_295x166.jpg?r=pad';
+        $this->db->where_in('id',array('61','62','63','64','65','66','67','68','69','70','71','72','73','74','75','76','77','78','79','80'));
+        $this->db->update('articles',$data);
+    }
+    
+     function get_change4()
+    {    $data['url_link'] = 'https://player.vimeo.com/external/228462208.sd.mp4?s=d6778cc0dae6e66d4beb2570cee7b1b6dec1cee5&profile_id=164';
+         $data['url_thumb'] = 'https://i.vimeocdn.com/video/648519659_295x166.jpg?r=pad';
+         $data['trailer_video'] = 'https://player.vimeo.com/external/228462208.sd.mp4?s=d6778cc0dae6e66d4beb2570cee7b1b6dec1cee5&profile_id=164';
+         $data['trailer_thumb'] = 'https://i.vimeocdn.com/video/648519659_295x166.jpg?r=pad';
+        $this->db->where_in('id',array('81','82','83','84','85','86','87','88','89','90','91','92','93','94','95','96','97','98','99','100'));
+        $this->db->update('articles',$data);
+    }
+    
+    function get_change5()
+    {    $data['url_link'] = 'https://player.vimeo.com/external/228469559.sd.mp4?s=1e301c85df25270414d15ba02f507c585788f721&profile_id=165';
+         $data['url_thumb'] = 'https://i.vimeocdn.com/video/648528871_295x166.jpg?r=pad';
+         $data['trailer_video'] = 'https://player.vimeo.com/external/228469559.sd.mp4?s=1e301c85df25270414d15ba02f507c585788f721&profile_id=165';
+         $data['trailer_thumb'] = 'https://i.vimeocdn.com/video/648528871_295x166.jpg?r=pad';
+        $this->db->where_in('id',array('101','102','103','104','105','106','107','108','109','110','111','112','113','114','115','116','117','118','119','120'));
+        $this->db->update('articles',$data);
+    }
+    
+    function get_change()
+    {    $data['url_link'] = 'https://player.vimeo.com/external/228469559.sd.mp4?s=1e301c85df25270414d15ba02f507c585788f721&profile_id=165';
+         $data['url_thumb'] = 'https://i.vimeocdn.com/video/648528871_295x166.jpg?r=pad';
+         $data['trailer_video'] = 'https://player.vimeo.com/external/228469559.sd.mp4?s=1e301c85df25270414d15ba02f507c585788f721&profile_id=165';
+         $data['trailer_thumb'] = 'https://i.vimeocdn.com/video/648528871_295x166.jpg?r=pad';
+        $this->db->where_in('id',array('121','122','123','124','125','126','127','128','129','130','131','132','133'));
+        $this->db->update('articles',$data);
+    }
+    
+    function delete_mini()
+    {
+        $this->db->where('article_type','mini_certification');
+        $this->db->delete('articles');
+    }
+    
+    function get_search_history($userid)
+    {
+       $this->db->where('user_id',$userid); 
+       //$this->db->where('assesment_id',$assesment_id); 
+       return $this->db->get('search_history')->row();
+    }
+    
+    function update_search_history($save,$user_id)
+    {
+       $this->db->where('user_id',$user_id);
+       $this->db->update('search_history',$save);
+       return true;
+    }
+    
+    function save_search_history($save)
+    {  
+       $this->db->insert('search_history',$save);
+       return $this->db->insert_id();
+    }
+    
+    function delete_search_history($user_id)
+    {
+        $this->db->where('user_id',$user_id);
+        $this->db->delete('search_history');
+        return true;
+    }
+    function get_article_users($id)
+    {
+        $this->db->select('users.username as username,reviews.article_id,reviews.user_id');
+        $this->db->where('article_id',$id);
+        $this->db->join('users','users.id=reviews.user_id','left');
+        return $this->db->get('reviews')->result();
+    }
+    
+    function get_article_user_comments($articleid)
+    {
+        $this->db->select('reviews.*,users.username as username,users.email');
+        $this->db->where('article_id',$articleid);
+        //$this->db->where('user_id',$userid);
+        $this->db->join('users','users.id=reviews.user_id','left');
+        return $this->db->get('reviews')->result();
+    }
+	function update_telenor_responses($data)
+	{
+		 $this->db->insert('telenor_response',$data);
+       return $this->db->insert_id();
+	}
+	function get_telenor_data($mobile)
+	{
+		
+		$this->db->where('mobile', $mobile);
+        return $this->db->get('telenor_otp_data')->row();
+		
+	}
+	
+	function update_telenor_data($id ,$mobile_otp)
+	{
+		//echo $id;  echo $mobile_otp; exit;
+		$data['mobile_otp'] = $mobile_otp;
+		$this->db->where('id',$id);
+       $this->db->update('telenor_otp_data',$data);
+       return true;
+	}
+		function get_telenor_subscribed_data($mobile)
+	{
+		//$this->db->select('*');
+		$this->db->where('msisdn', $mobile);
+		$this->db->where('charging_type', "ACT");
+        return $this->db->get('telenor_response')->row();
+		
+	}
+	function check_telenor_subscribed_or_not($mobile)
+	{	
+                
+		$this->db->select('MAX(id) as id');
+		$this->db->where('msisdn', $mobile);
+	  return $this->db->get('telenor_response')->row();
+		
+	}
+	function get_telenor_old_data($id)
+	{
+
+		$this->db->where('id', $id);
+		$this->db->where('lifecycle', "A");
+        return $this->db->get('telenor_response')->row();
+		
+	}
+	function get_telenor_recents_data($id)
+	{
+
+		$this->db->where('id', $id);
+		//$this->db->where('lifecycle', "A");
+        return $this->db->get('telenor_response')->row();
+		
+	}
+	
+}
